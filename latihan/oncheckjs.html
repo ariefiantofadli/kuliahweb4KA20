@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formku" action="">
+        <p>Nama: </p>
+        <input type="text" name="nama" id="">
+        <br>
+        <input type="button" value="Kirim" onclick="cekNama(this.form)">
+        <br>
+    </form>
+
+    <!-- Inline JavaScript -->
+    <script>
+        function cekNama(form) {
+            if(form.elements[0].value == "") {
+                alert("Nama harus dimasukkan.");
+                form.nama.fokus();
+                form.nama.select();
+                return(false);
+            }
+            
+            alert("Terima kasih, " + form.elements[0].value);
+            return(true);
+        }
+    </script>    
+</body>
+</html>
