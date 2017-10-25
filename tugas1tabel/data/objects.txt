@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "no": "1",
+      "nama": "Fadhlillah Ariefianto",
+      "kelas": "4KA20",
+      "jurusan": "Sistem Informasi"
+    },
+    {
+      "no": "2",
+      "nama": "M Danang Hascaryo",
+      "kelas": "4KA20",
+      "jurusan": "Sistem Informasi"
+    },
+    {
+        "no": "3",
+        "nama": "M Arief Setiawan",
+        "kelas": "4KA20",
+        "jurusan": "Sistem Informasi"
+    }
+  ]
+}

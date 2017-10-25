@@ -12,8 +12,8 @@
     <!-- Offline CSS -->
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css"/>
+    <!-- DataTables jQuery CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css"/>
 
     <title>Tugas 1 - Form</title>
 </head>
@@ -31,48 +31,51 @@
     <div class="container">
         <div class="row">
             <div class="table-responsive">
-                <table width="100%" class="table table-bordered table-hover">
-                    <thead class="blue-grey lighten-4">
+                <table width="100%" class="display" id="isitabel" cellspacing="0">
+                    <thead>
                         <tr>
-                            <th>No.</th>
+                            <th>No</th>
                             <th>Nama</th>
                             <th>Kelas</th>
                             <th>Jurusan</th>
                         </tr>
                     </thead>
-                    
-                    <tbody>
+                    <tfoot>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Fadhlillah Ariefianto</td>
-                            <td>4KA20</td>
-                            <td>Sistem Informasi</td>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Jurusan</th>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>M Danang Hascaryo</td>
-                            <td>4KA20</td>
-                            <td>Sistem Informasi</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>M Arief Setiawan</td>
-                            <td>4KA20</td>
-                            <td>Sistem Informasi</td>
-                        </tr>
-                    </tbody>
+                    </tfoot>
                 </table>
             </div> <!-- end table-responsive -->
         </div> <!-- end row -->
     </div> <!-- end container -->
 
     <!-- Offline JavaScript -->
-    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/datatables.min.js"></script> -->
     
     <!-- Online JavaScript -->
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
+
+    <!-- Inline JavaScript -->
+    <script>
+        $(document).ready(function() {
+            $('#isitabel').DataTable( {
+                "ajax": "data/objects.txt",
+                "columns": [
+                    { "data": "no" },
+                    { "data": "nama" },
+                    { "data": "kelas" },
+                    { "data": "jurusan" }
+                ]
+            } );
+        } );
+    </script>
 
     
 </body>
