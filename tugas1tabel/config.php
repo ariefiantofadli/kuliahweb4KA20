@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: application/json');
+
 //open koneksi to mysql db
 $koneksi = mysqli_connect("localhost","root","","db_kuliahweb") or die("Error " . mysqli_error($koneksi));
 
@@ -13,7 +15,7 @@ while($row =mysqli_fetch_assoc($result))
 {
     $data[] = $row;
 }
-echo json_encode($data);
+echo json_encode($data, JSON_PRETTY_PRINT);
 
 //close the db koneksi
 mysqli_close($koneksi);
