@@ -20,15 +20,15 @@
 <body>
     
     <!-- Gambar Header -->
-    <img class="center-block" src="logo.png" height="175" width="175">
+    <img class="center-block" src="logo.png" height="150" width="150">
     
     <!-- Text Judul / Heading -->
-    <h1 class="text-center">Data Mahasiswa</h1>
-
-    <br>
+    <h1 class="text-center">Universitas Gunadarma</h1>
 
     <!-- Isi tabel -->
     <div class="container">
+        <h2>Data Mahasiswa</h2>
+        <br>
         <div class="row">
             <div class="table-responsive">
                 <table width="100%" class="display" id="isitabel" cellspacing="0">
@@ -68,9 +68,12 @@
     <script>
         $(document).ready(function() {
             $('#isitabel').DataTable( {
-                "ajax": "data/objects.txt",
+                "ajax": {
+                    url: 'config.php',
+                    dataSrc: ''
+                },
                 "columns": [
-                    { "data": "no" },
+                    { "data": "id" },
                     { "data": "nama" },
                     { "data": "kelas" },
                     { "data": "jurusan" }
@@ -78,7 +81,6 @@
             } );
         } );
     </script>
-
     
 </body>
 </html>
