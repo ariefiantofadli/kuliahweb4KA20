@@ -28,6 +28,8 @@
     <!-- Isi tabel -->
     <div class="container">
         <h2>Data Mahasiswa</h2>
+        <button type="submit">Tambah Data</button>
+        <br>
         <br>
         <div class="row">
             <div class="table-responsive">
@@ -88,7 +90,7 @@
                 ],
 
                 //Set column definition initialisation properties.
-                //Added button for last colomn
+                //Added button for last column
                 "columnDefs": [
                 { 
                     "targets": [ -1 ], //last column
@@ -98,7 +100,7 @@
             });
 
             $('#isitabel tbody').on( 'click', 'button', function () {
-                alert( "Berhasil di klik!");
+                alert( "Berhasil di klik!" );
             } );
         } );
     </script>
