@@ -18,6 +18,7 @@ Struktur Tabel
 DataTables with Ajax:
 * https://datatables.net/examples/ajax/objects.html
 * https://datatables.net/manual/ajax
+* https://datatables.net/examples/ajax/null_data_source.html
 
 Referensi:
 * http://www.kodingmadesimple.com/2015/01/convert-mysql-to-json-using-php.html
