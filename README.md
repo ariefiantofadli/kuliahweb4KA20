@@ -10,9 +10,9 @@ Struktur Tabel
 * jurusan(varchar)
 
 DataTables with Ajax:
-https://datatables.net/examples/ajax/objects.html
-https://datatables.net/manual/ajax
+* https://datatables.net/examples/ajax/objects.html
+* https://datatables.net/manual/ajax
 
 Referensi:
-http://www.kodingmadesimple.com/2015/01/convert-mysql-to-json-using-php.html
+* http://www.kodingmadesimple.com/2015/01/convert-mysql-to-json-using-php.html
 
